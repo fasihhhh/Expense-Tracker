@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/stye.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Home</title>
+</head>
+<body>
+    <!-- navbar here -->
+    <header class="navbar navbar-expand-md dark-blue-bg py-1">
+        <div class="container">
+            <div class="logo-here col-md-2  flex-center p-2" title="Expenses Resolved">
+                <a href="/Frontend/home.html"><img src="/Frontend/assets/imgs/asset-management.png" class="p-1 p-sm-0" alt="logo" height="80px"></a>
+            </div>            
+            <button class="navbar-toggler bg-white me-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon   p-2"></span>
+            </button>
+            <nav class="col-md-10  collapse navbar-collapse" id="navbarNav">
+                <ul class="d-flex w-100 navbar-nav justify-content-around m-auto list-unstyled align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white fs-5 position-relative active" href="/Frontend/home.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5 position-relative " href="/Frontend/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5 position-relative" href="/Frontend/budget.html">Budget</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5 position-relative" href="/Frontend/reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5 position-relative user" title="User Setting" href="#"><img src="assets/imgs/user.png" class="img-fluid" width="40px" height="40px" alt="user_logo"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- navbar here -->
+    <!-- main here -->
+    <main class="px-1 py-3">
+        <div class="container">
+            <section class="border-2 Poppins py-4">
+                <div class="row gx-4 gy-4 align-items-center">
+                    <div class="col-12">
+                        <h1 class="fw-medium mt-2 ms-md-4 fw-semibold Montserrat "> <span id="userName">Faseeh's </span> Dashboard Overview </h1>
+                    </div>                    
+                    <div class="col-12  col-xl-4">
+                        <div class="each-card b rounded-4  p-2 py-4 d-flex justify-content-around">
+                            <div class=" text-start d-flex justify-content-center flex-column">
+                                <h2 class="pt-2 pt-md-3 px-1 text-center fw-semibold ">Current Balance</h2>
+                                <h1 id="currentBalance" class="text-center Montserrat fw-medium">2000<span id="currency" class="fw-medium fs-5">Rs</span></h1>
+                            </div>
+                            <div class="flex-center d-flex flex-column justify-content-end">
+                                <img src="/Frontend/assets/imgs/decrease.png" class="img-fluid " width="60px" height="60px" alt="icon">
+                                <p class="mt-0 fw-medium">Last</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12  col-xl-4 position-relative">
+                        <button type="button" id="withdrawBtn"  class="btn each-card border-0 w-100 rounded-4  p-2 py-4 d-flex justify-content-around" data-bs-toggle="modal" data-bs-target="#WithdrwalModal">
+                            <div class=" text-start d-flex justify-content-center flex-column px-1">
+                                <p class="Montserrat fw-semibold my-0 py-0 px-1 dark-blue-text">Last</p>
+                                <h2 class=" px-1 text-center fw-semibold">Withdrawal</h2>
+                                <h1 id="currentBalance" class="text-center Montserrat fw-medium">2000<span id="currency" class="fw-medium fs-5">Rs</span></h1>
+                            </div>
+                            <div class="flex-center px-1 d-flex flex-column justify-content-end">
+                                <img src="./assets/imgs/increase.png" class="img-fluid " width="60px" height="60px" alt="icon">
+                                <p class="mt-0 fw-medium my-0">From Yesterday</p>
+                                <p class="mt-0 fw-medium fs-13px text-danger my-0 py-0">*click to add</p>
+                            </div>
+                        </button >
+                        <!-- Modal Withdraw -->
+                        <div class="modal fade" id="WithdrwalModal" tabindex="-1" aria-labelledby="WithdrwalModal" aria-hidden="true">
+                            <div class="modal-dialog  ">
+                                <div class="modal-content">
+                                    <form action="" method="post">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5">Add Withdrwal</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body  pb-0">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                                                <input type="text" id="addWithdrawalTitle" class="form-control" required aria-label="Sizing example input" placeholder="Max 18 words" aria-describedby="inputGroup-sizing-default">
+                                            </div>                      
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                                                <input type="text" id="addWithdrawalAmount" class="form-control" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                            </div>                       
+                                        </div>
+                                        <div class="text-center px-3 pb-2">
+                                            <select class="border-0 rounded-1 px-2 bg-secondary text-white btn"  id="description" required>
+                                                <option value="" disabled selected hidden >Select Description</option>
+                                                <option value="food" class="descriptionBtn dropdown-item">Food</option>
+                                                <option value="rent" class="descriptionBtn dropdown-item">Rent</option>
+                                                <option value="loan" class="descriptionBtn dropdown-item border-1">Loan/debt</option>
+                                                <option value="entertainment" class="descriptionBtn dropdown-item">Entertainment</option>
+                                                <option value="others" class="descriptionBtn dropdown-item">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" id="withrawalSave"  class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12  col-xl-4  position-relative">
+                        <button type="button" id="depositBtn" class="btn each-card border-0  w-100 rounded-4  px-2 py-4 d-flex justify-content-around" data-bs-toggle="modal" data-bs-target="#depositModal">
+                            <div class=" text-start d-flex justify-content-center flex-column px-1">
+                                <p class="Montserrat fw-semibold my-0 py-0 px-1 dark-blue-text">Last</p>
+                                <h2 class="px-1 text-center fw-semibold">Deposit</h2>
+                                <h1 id="currentBalance" class="text-center Montserrat fw-medium">2000<span id="currency" class="fw-medium fs-5">Rs</span></h1>
+                            </div>
+                            <div class="flex-center px-2 d-flex flex-column justify-content-end">
+                                <img src="./assets/imgs/decrease.png" class="img-fluid " width="60px" height="60px" alt="icon">
+                                <p class="mt-0 fw-medium my-0">From Yesterday</p>                                
+                                <p class="mt-0 fw-medium fs-13px text-danger my-0 py-0">*click to add</p>
+                            </div>
+                        </button >
+                        <!-- Modal deposit -->
+                        <div class="modal fade" id="depositModal" tabindex="0" aria-labelledby="depositModal" aria-hidden="true">
+                            <div class="modal-dialog  ">
+                                <div class="modal-content">
+                                    <form action="" method="post">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5">Add Deposits</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body ">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                                                <input type="text" id="addDepositTitle" class="form-control" required aria-label="Sizing example input" placeholder="Max 18 words" aria-describedby="inputGroup-sizing-default">
+                                            </div>                       
+                                            <div class="input-group ">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                                                <input type="text" id="addDepositAmount" class="form-control" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                            </div>                       
+                                        </div>
+                                        <div class="text-center px-3 pb-2">
+                                            <select class="border-0 rounded-1 px-2 bg-secondary text-white btn" required id="description">
+                                                <option value="" disabled selected hidden >Select Description</option>
+                                                <option value="food" class="descriptionBtn dropdown-item">Food</option>
+                                                <option value="rent" class="descriptionBtn dropdown-item">Rent</option>
+                                                <option value="loan" class="descriptionBtn dropdown-item border-1">Loan/debt</option>
+                                                <option value="entertainment" class="descriptionBtn dropdown-item">Entertainment</option>
+                                                <option value="others" class="descriptionBtn dropdown-item">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" id="depositSave" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h2 class="py-4 text-center fw-semibold Montserrat fs-1">Recent Transactions  </h2>
+                    </div>
+                    <div class="col-12 col-xl-8 ">
+                        <div class="position-relative recent-transaction-div max-h-500px overflow-auto shadow-lg rounded-4 px-md-3 pb-md-3 pt-0 ">
+                            <div class="d-flex justify-content-between bg-dange pb-2 px-3 py-4 bg-white position-sticky top-0">
+                                <div class="Title  ">
+                                    <h4>Title</h4>
+                                </div>
+                                <div class="amount">
+                                    <h4>Amount</h4>
+                                </div>
+                            </div>
+                            <div class="div overflow-auto bg-dangr px-2 px-md-3">
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                                <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                    <div class="descrption">
+                                        <p id="transactions_title">Netflix Bill</p>
+                                    </div>
+                                    <div class="time fs-13px text-center">
+                                        <p id="transactions_time">12:56pm<br>18/87/79</p>
+                                    </div>
+                                    <div class="amount">
+                                        <p id="transactions_amount" >208544</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pie-chart col-12 col-xl-4 ">
+                        <h3 class="ms-3 mb-4 Montserrat fw-semibold">Statistical View</h3>
+                        <div class="canvas py-3 px-2 mx-md-3 rounded-4 shadow max-height-400">  
+                            <canvas id="myChart" class="bg-anger py-3 gap-2 m-auto" style="width:100%; max-width:400px; height:400px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="fw-medium mt-2 ms-4 py-4 fw-semibold Montserrat ">Monthly Budget Overview </h1>
+                    </div>        
+                    <div class="col-12 d-flex flex-column flex-xl-row align-items-center justify-content-between -danger">
+                        <div class="set-budget gap-2 p-md-4 flex-center flex-column  -info  Montserrat">
+                            <h4 id="budgetLimitMessage" class="bg-secondary-subtle p-4 p-md-5 rounded-4 w-100">You are Spending in your Limits  ....</h4>
+                            <div class="d-flex flex-md-row flex-column text-center gap-3 ">
+                                <h3 id="budgetLimitMessage" class="btn-secondary  btn fs-5 py-3 px-2 rounded-4">Daily Spending Limit<span class="fs-3 ms-2 d-inline-block">1400</span></h3>
+                                <h3 id="budgetLimitMessage" class="btn-danger btn fs-5 py-3 px-2 rounded-4">Today's Spending <span class="fs-3 ms-2 d-inline-block">2300</span></h3>
+                            </div>
+                        </div>
+                        <div class="div -success py-5">
+                            <canvas id="myChart2"  style="width:100%;max-width:400px; height:300px; " class="my-5 my-md-0 mx-auto"></canvas>
+                        </div>
+                    </div>
+                    <!-- <div class="col-12">
+                        <div class="buttons-section d-flex justify-content-center flex-wrap gap-3 py-5">
+                            <button class="btn-danger btn">Add Widrawth</button>
+                            <button class="btn-success btn">Add Deposits</button>
+                            <button class="btn-primary btn">Account Settings</button>
+                        </div>                    
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- main here -->
+    <!-- footer here -->
+    <footer class="dark-blue-bg text-white text-center py-2 Montserrat pt-4 ">
+        <div class="container">
+            <nav class="pb-5 pt-3" >
+                <ul class="d-flex flex-md-row flex-column bg-daner justify-content-around align-items-center mb-0 text-start gap-2  list-unstyled">
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative " href="/home.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative" href="/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative" href="/budget.html">Budget</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative" href="/reports.html">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative" href="/reports.html">Cookies</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-6 hover-footer position-relative" href="/reports.html">Terms&Conditions </a></li>
+                </ul>
+            </nav>
+            <p class="my-0 py-0">copyright reserved Expense Resolved @2026</p>
+        </div>
+    </footer>
+    <!-- footer here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/Frontend/assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

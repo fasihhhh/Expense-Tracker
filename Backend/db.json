@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ali Khan",
+      "email": "ali.khan@example.com",
+      "password": "123456",
+      "role": "student",
+      "cgpa": 3.45,
+      "department": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Sara Ahmed",
+      "email": "sara.ahmed@example.com",
+      "password": "password",
+      "role": "student",
+      "cgpa": 3.82,
+      "department": "Software Engineering"
+    },
+    {
+      "id": 3,
+      "name": "Fasih Rehman",
+      "email": "fasih.rehman@example.com",
+      "password": "fasih123",
+      "role": "student",
+      "cgpa": 3.71,
+      "department": "Computer Science"
+    }
+  ],
+
+  "courses": [
+    {
+      "id": 1,
+      "title": "Digital Logic Design",
+      "code": "DLD-201",
+      "creditHours": 3,
+      "teacher": "Dr. Ahmad"
+    },
+    {
+      "id": 2,
+      "title": "Data Structures",
+      "code": "DS-202",
+      "creditHours": 4,
+      "teacher": "Ms. Sana"
+    }
+  ],
+
+  "enrollments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1,
+      "attendance": 85
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "courseId": 2,
+      "attendance": 68
+    }
+  ]
+}
