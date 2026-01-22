@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Ali Khan",
       "email": "ali.khan@example.com",
       "password": "123456",
@@ -10,7 +10,7 @@
       "department": "Computer Science"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Sara Ahmed",
       "email": "sara.ahmed@example.com",
       "password": "password",
@@ -19,7 +19,7 @@
       "department": "Software Engineering"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Fasih Rehman",
       "email": "fasih.rehman@example.com",
       "password": "fasih123",
@@ -28,36 +28,182 @@
       "department": "Computer Science"
     }
   ],
-
-  "courses": [
+  "transactions": [
     {
-      "id": 1,
-      "title": "Digital Logic Design",
-      "code": "DLD-201",
-      "creditHours": 3,
-      "teacher": "Dr. Ahmad"
+      "id": "1",
+      "title": "Grocery Shopping",
+      "amount": 2500,
+      "type": "withdrawal",
+      "description": "Food",
+      "createdAt": "2026-01-20T21:10:00"
     },
     {
-      "id": 2,
-      "title": "Data Structures",
-      "code": "DS-202",
-      "creditHours": 4,
-      "teacher": "Ms. Sana"
-    }
-  ],
-
-  "enrollments": [
-    {
-      "id": 1,
-      "userId": 1,
-      "courseId": 1,
-      "attendance": 85
+      "id": "2",
+      "title": "Bus Fare",
+      "amount": 200,
+      "type": "withdrawal",
+      "description": "Transport",
+      "createdAt": "2026-01-19T08:15:00"
     },
     {
-      "id": 2,
-      "userId": 3,
-      "courseId": 2,
-      "attendance": 68
+      "id": "3",
+      "title": "Freelance Payment",
+      "amount": 15000,
+      "type": "deposit",
+      "description": "Work",
+      "createdAt": "2026-01-20T21:11:00"
+    },
+    {
+      "id": "4",
+      "title": "Mobile Recharge",
+      "amount": 500,
+      "type": "withdrawal",
+      "description": "Utilities",
+      "createdAt": "2026-01-18T14:30:00"
+    },
+    {
+      "id": "d30d",
+      "title": "shawarma",
+      "amount": "250",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-21T23:43:32.267Z"
+    },
+    {
+      "id": "8d9a",
+      "title": "petrol",
+      "amount": "2900",
+      "type": "withdrawal",
+      "description": "others",
+      "createdAt": "2026-01-21T23:56:53.397Z"
+    },
+    {
+      "id": "6985",
+      "title": "fds",
+      "amount": "235",
+      "type": "withdrawal",
+      "description": "entertainment",
+      "createdAt": "2026-01-22T00:14:04.065Z"
+    },
+    {
+      "id": "d877",
+      "title": "Annual Bonus",
+      "amount": "23000",
+      "type": "deposit",
+      "description": "profit",
+      "createdAt": "2026-01-22T00:19:18.697Z"
+    },
+    {
+      "id": "30b1",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:29.688Z"
+    },
+    {
+      "id": "9c69",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:31.524Z"
+    },
+    {
+      "id": "0b6b",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:33.321Z"
+    },
+    {
+      "id": "2db2",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:35.210Z"
+    },
+    {
+      "id": "589e",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:35.379Z"
+    },
+    {
+      "id": "ba70",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:35.586Z"
+    },
+    {
+      "id": "9b0a",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:41.824Z"
+    },
+    {
+      "id": "89e2",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:48.874Z"
+    },
+    {
+      "id": "2bb8",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:49.162Z"
+    },
+    {
+      "id": "40c8",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:49.390Z"
+    },
+    {
+      "id": "28f6",
+      "title": "noodles",
+      "amount": "300",
+      "type": "withdrawal",
+      "description": "food",
+      "createdAt": "2026-01-22T01:52:54.355Z"
+    },
+    {
+      "id": "c8b8",
+      "title": "100",
+      "amount": "zameen",
+      "type": "deposit",
+      "description": "others",
+      "createdAt": "2026-01-22T01:54:32.754Z"
+    },
+    {
+      "id": "34d1",
+      "title": "fdszx",
+      "amount": "34",
+      "type": "deposit",
+      "description": "salary",
+      "createdAt": "2026-01-22T01:57:29.606Z"
+    },
+    {
+      "id": "8693",
+      "title": "@%43QERd",
+      "amount": "34",
+      "type": "deposit",
+      "description": "investments",
+      "createdAt": "2026-01-22T01:58:58.506Z"
     }
   ]
 }
