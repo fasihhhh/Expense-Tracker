@@ -3,42 +3,33 @@
     {
       "id": "1",
       "name": "Ali Khan",
-      "email": "ali.khan@example.com",
-      "password": "123456",
-      "role": "student",
-      "cgpa": 3.45,
-      "department": "Computer Science"
+      "email": "alikhan@example.com",
+      "password": "123456"
     },
     {
       "id": "2",
       "name": "Sara Ahmed",
-      "email": "sara.ahmed@example.com",
-      "password": "password",
-      "role": "student",
-      "cgpa": 3.82,
-      "department": "Software Engineering"
+      "email": "saraahmed@example.com",
+      "password": "password"
     },
     {
       "id": "3",
       "name": "Fasih Rehman",
-      "email": "fasih.rehman@example.com",
-      "password": "fasih123",
-      "role": "student",
-      "cgpa": 3.71,
-      "department": "Computer Science"
+      "email": "fasihrehman@example.com",
+      "password": "fasih123"
     }
   ],
   "transactions": [
     {
-      "id": "1",
+      "accountId": "12",
       "title": "Grocery Shopping",
       "amount": 2500,
       "type": "withdrawal",
-      "description": "Food",
+      "description": "food",
       "createdAt": "2026-01-20T21:10:00"
     },
     {
-      "id": "2",
+      "accountId": "12",
       "title": "Bus Fare",
       "amount": 200,
       "type": "withdrawal",
@@ -46,7 +37,7 @@
       "createdAt": "2026-01-19T08:15:00"
     },
     {
-      "id": "3",
+      "accountId": "12",
       "title": "Freelance Payment",
       "amount": 15000,
       "type": "deposit",
@@ -54,7 +45,7 @@
       "createdAt": "2026-01-20T21:11:00"
     },
     {
-      "id": "4",
+      "accountId": "12",
       "title": "Mobile Recharge",
       "amount": 500,
       "type": "withdrawal",
@@ -62,148 +53,52 @@
       "createdAt": "2026-01-18T14:30:00"
     },
     {
-      "id": "d30d",
-      "title": "shawarma",
-      "amount": "250",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-21T23:43:32.267Z"
-    },
-    {
-      "id": "8d9a",
-      "title": "petrol",
-      "amount": "2900",
-      "type": "withdrawal",
-      "description": "others",
-      "createdAt": "2026-01-21T23:56:53.397Z"
-    },
-    {
-      "id": "6985",
-      "title": "fds",
-      "amount": "235",
-      "type": "withdrawal",
-      "description": "entertainment",
-      "createdAt": "2026-01-22T00:14:04.065Z"
-    },
-    {
-      "id": "d877",
-      "title": "Annual Bonus",
-      "amount": "23000",
-      "type": "deposit",
-      "description": "profit",
-      "createdAt": "2026-01-22T00:19:18.697Z"
-    },
-    {
-      "id": "30b1",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:29.688Z"
-    },
-    {
-      "id": "9c69",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:31.524Z"
-    },
-    {
-      "id": "0b6b",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:33.321Z"
-    },
-    {
-      "id": "2db2",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:35.210Z"
-    },
-    {
-      "id": "589e",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:35.379Z"
-    },
-    {
-      "id": "ba70",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:35.586Z"
-    },
-    {
-      "id": "9b0a",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:41.824Z"
-    },
-    {
-      "id": "89e2",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:48.874Z"
-    },
-    {
-      "id": "2bb8",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:49.162Z"
-    },
-    {
-      "id": "40c8",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:49.390Z"
-    },
-    {
-      "id": "28f6",
-      "title": "noodles",
-      "amount": "300",
-      "type": "withdrawal",
-      "description": "food",
-      "createdAt": "2026-01-22T01:52:54.355Z"
-    },
-    {
-      "id": "c8b8",
-      "title": "100",
-      "amount": "zameen",
-      "type": "deposit",
-      "description": "others",
-      "createdAt": "2026-01-22T01:54:32.754Z"
-    },
-    {
-      "id": "34d1",
-      "title": "fdszx",
-      "amount": "34",
+      "id": "58a8",
+      "accountId": "12",
+      "title": "b",
+      "amount": 60,
       "type": "deposit",
       "description": "salary",
-      "createdAt": "2026-01-22T01:57:29.606Z"
+      "createdAt": "2026-01-25T04:25:21.836Z"
     },
     {
-      "id": "8693",
-      "title": "@%43QERd",
-      "amount": "34",
-      "type": "deposit",
-      "description": "investments",
-      "createdAt": "2026-01-22T01:58:58.506Z"
+      "id": "b904",
+      "accountId": "12",
+      "title": "gcfv",
+      "amount": 1,
+      "type": "withdrawal",
+      "description": "rent",
+      "createdAt": "2026-01-25T04:25:47.261Z"
+    },
+    {
+      "id": "56db",
+      "accountId": "12",
+      "title": "gcfv",
+      "amount": 1,
+      "type": "withdrawal",
+      "description": "loan",
+      "createdAt": "2026-01-25T04:26:00.005Z"
+    },
+    {
+      "id": "7a59",
+      "accountId": "12",
+      "title": "gcfv",
+      "amount": 100,
+      "type": "withdrawal",
+      "description": "loan",
+      "createdAt": "2026-01-25T04:26:18.429Z"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "12",
+      "userId": "1",
+      "balance": 958
+    },
+    {
+      "id": "13",
+      "userId": "2",
+      "balance": 900
     }
   ]
 }
