@@ -31,7 +31,7 @@ let BaseURL = 'http://127.0.0.1:3000';
 let currentBalanceVariable = 0;
 
 let accountId = "";
-let userId = 1;
+let userId = 2;
 
 
 async function getData() {
@@ -40,11 +40,12 @@ async function getData() {
         console.log("Fetching Data ... ")
         let userResponse = await fetch(`${BaseURL}/users/${userId}`);
         let userData = await userResponse.json();
-        console.log("user "+userData)
+        console.log("user "+JSON.stringify(userData))
 
         let accountResponse = await fetch(`${BaseURL}/accounts?userId=${userId}`);
         let accountData = await accountResponse.json();
         console.log("acc "+ JSON.stringify(accountData))
+        userName.textContent = userData.name;
         accountId = accountData[0].id; 
         console.log("acc id "+accountId)
       
@@ -124,8 +125,10 @@ function recentTransactions(transactionData){
                               <div class="time fs-13px text-center w-25 d-none d-md-block">
                                   <p class="mb-0" id="transactions_time">${time.toLocaleTimeString()}<br>${time.toLocaleDateString()}</p>
                               </div>
-                              <div class="amount text-end w-25 text-danger ">
-                                  <p class="mb-0" id="transactions_amount" > -${element.amount}</p>
+                              <div class="amount text-end w-25 text-danger d-flex gap-2 justify-content-end align-items-center">
+                                  <button class="btn btn-danger delete-btn" data-id="${element.id}" type="${element.type}" id="transactionDeleteBtn">Rollback</button>
+                                  
+                                  <p class="mb-0 w-25" id="transactions_amount" > -${element.amount}</p>
                               </div>
     `
                 lastWithdrawalVariable = element.amount;
@@ -138,8 +141,9 @@ function recentTransactions(transactionData){
                               <div class="time fs-13px text-center w-25 d-none d-md-block">
                                   <p class="mb-0" id="transactions_time">${time.toLocaleTimeString()}<br>${time.toLocaleDateString()}</p>
                               </div>
-                              <div class="amount text-end w-25 text-success ">
-                                  <p class="mb-0" id="transactions_amount" >+${element.amount}</p>
+                              <div class="amount text-end w-25 text-success d-flex gap-2 justify-content-end align-items-center">
+                                  <button class="btn btn-danger delete-btn" data-id="${element.id}"  type="${element.type}" id="transactionDeleteBtn">Rollback</button>
+                                  <p class="mb-0 w-25" id="transactions_amount" >+${element.amount}</p>
                               </div>
     `
                 lastDepositVariable = element.amount;
@@ -147,10 +151,13 @@ function recentTransactions(transactionData){
     // console.log(element)
     recent_trans.prepend(eachTrans)
 
-    
   });
+
+  
     lastDeposit.textContent = lastDepositVariable;
     lastWithdrawal.textContent = lastWithdrawalVariable;
+
+
 }
 
 function currentBalanceDisplay(){
@@ -225,7 +232,26 @@ function validateTransaction(title,amount,description) {
   return true;
 }
 
+async function deleteTransaction(transactionId,transactionType,withdrawaltransactionAmount,DeposittransactionAmount){
 
+
+    await fetch(`${BaseURL}/transactions/${transactionId}`, {
+      method: "DELETE"
+    });
+    console.log(transactionType)
+    console.log(currentBalanceVariable)
+    console.log("w "+typeof(withdrawaltransactionAmount))
+    console.log("d "+DeposittransactionAmount)
+    if(transactionType=='withdrawal'){
+      currentBalanceVariable = currentBalanceVariable + withdrawaltransactionAmount;
+    }
+    else if(transactionType=='deposit'){
+      currentBalanceVariable = currentBalanceVariable - DeposittransactionAmount;
+    }
+    currentBalanceUpdate(currentBalanceVariable)
+    getData();
+
+}
 
 document.getElementById('withrawalSave').addEventListener('click',()=>{
     const amount = addWithdrawalAmount.value;
@@ -248,4 +274,35 @@ document.getElementById('depositSave').addEventListener('click',()=>{
     if (!validateTransaction(title, amount, description)) return;
     addNewTransaction(Number(amount),title,description,transactionType)
 })
+document.getElementById("downloadBtn").addEventListener("click", async () => {
+  const { jsPDF } = window.jspdf;
+  const element = document.getElementById("recent_trans");
 
+  const canvas = await html2canvas(element, { scale: 2 });
+  const imgData = canvas.toDataURL("image/png");
+
+  const pdf = new jsPDF("p", "mm", "a4");
+
+  const imgWidth = 210; // A4 width in mm
+  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+  pdf.addImage(imgData, "PNG", 0, 10, imgWidth, imgHeight);
+  pdf.save("transaction-statement.pdf");
+});
+let vvfg="";
+
+    recent_trans.addEventListener('click',(e)=>{
+      if(!e.target.classList.contains('delete-btn')) return;
+      console.log(e.target.dataset.id)
+      console.log(e.target.getAttribute('type'))
+      console.log(e.target.nextElementSibling.textContent)
+      vvfg= e.target.getAttribute('type');
+      let transactionId = e.target.dataset.id;
+      let transactionType = e.target.getAttribute('type');
+      let DeposittransactionAmount = (e.target.nextElementSibling.textContent).replace('+',"");
+      let withdrawaltransactionAmount = (e.target.nextElementSibling.textContent).replace('-',"");
+      console.log("d "+DeposittransactionAmount)
+      console.log("w "+withdrawaltransactionAmount)
+      deleteTransaction(transactionId,transactionType,Number(withdrawaltransactionAmount),Number(DeposittransactionAmount))
+      recentTransactions()
+    })

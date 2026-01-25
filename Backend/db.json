@@ -21,84 +21,61 @@
   ],
   "transactions": [
     {
+      "id": "d793",
       "accountId": "12",
-      "title": "Grocery Shopping",
-      "amount": 2500,
+      "title": "40",
+      "amount": null,
       "type": "withdrawal",
       "description": "food",
-      "createdAt": "2026-01-20T21:10:00"
+      "createdAt": "2026-01-25T09:37:32.933Z"
     },
     {
-      "accountId": "12",
-      "title": "Bus Fare",
-      "amount": 200,
-      "type": "withdrawal",
-      "description": "Transport",
-      "createdAt": "2026-01-19T08:15:00"
-    },
-    {
-      "accountId": "12",
-      "title": "Freelance Payment",
-      "amount": 15000,
-      "type": "deposit",
-      "description": "Work",
-      "createdAt": "2026-01-20T21:11:00"
-    },
-    {
-      "accountId": "12",
-      "title": "Mobile Recharge",
-      "amount": 500,
-      "type": "withdrawal",
-      "description": "Utilities",
-      "createdAt": "2026-01-18T14:30:00"
-    },
-    {
-      "id": "58a8",
-      "accountId": "12",
-      "title": "b",
-      "amount": 60,
-      "type": "deposit",
-      "description": "salary",
-      "createdAt": "2026-01-25T04:25:21.836Z"
-    },
-    {
-      "id": "b904",
-      "accountId": "12",
-      "title": "gcfv",
-      "amount": 1,
-      "type": "withdrawal",
-      "description": "rent",
-      "createdAt": "2026-01-25T04:25:47.261Z"
-    },
-    {
-      "id": "56db",
-      "accountId": "12",
-      "title": "gcfv",
-      "amount": 1,
-      "type": "withdrawal",
-      "description": "loan",
-      "createdAt": "2026-01-25T04:26:00.005Z"
-    },
-    {
-      "id": "7a59",
-      "accountId": "12",
-      "title": "gcfv",
+      "id": "41e8",
+      "accountId": "13",
+      "title": "chips",
       "amount": 100,
       "type": "withdrawal",
-      "description": "loan",
-      "createdAt": "2026-01-25T04:26:18.429Z"
+      "description": "food",
+      "createdAt": "2026-01-25T09:39:01.540Z"
+    },
+    {
+      "id": "ce9c",
+      "accountId": "13",
+      "title": "eidi",
+      "amount": 2000,
+      "type": "deposit",
+      "description": "profit",
+      "createdAt": "2026-01-25T09:39:17.634Z"
+    },
+    {
+      "id": "0d16",
+      "accountId": "13",
+      "title": "Zameen",
+      "amount": 150,
+      "type": "deposit",
+      "description": "investments",
+      "createdAt": "2026-01-25T09:41:12.571Z"
+    },
+    {
+      "id": "1ddf",
+      "accountId": "13",
+      "title": "plot",
+      "amount": 4500,
+      "type": "deposit",
+      "description": "investments",
+      "createdAt": "2026-01-25T09:41:38.004Z"
     }
   ],
   "accounts": [
     {
       "id": "12",
       "userId": "1",
-      "balance": 958
+      "balance": null
     },
     {
       "id": "13",
       "userId": "2",
-      "balance": 900
+      "balance": 7380
     }
   ]
 }

@@ -158,7 +158,7 @@
                     <div class="col-12 ">
                         <h2 class="py-4 text-center fw-semibold Montserrat fs-1">Recent Transactions  </h2>
                     </div>
-                    <div class="col-12 col-xl-8 ">
+                    <div class="col-12 col-xl-8 text-end">
                         <div class="position-relative bg-blak recent-transaction-div max-h-500px overflow-auto shadow-lg rounded-4 px-md-3 pb-3 pt-0 ">
                             <div class="d-flex justify-content-between border-bottom bg-dange pb-2 px-3 py-4 bg-white position-sticky top-0">
                                 <div class="Title  ">
@@ -169,23 +169,27 @@
                                 </div>
                             </div>
                             <div id="recent_trans" class="div  overflow-auto bg-daner px-3 px-md-3 top-0">
-                                <!-- <div class="each-transaction-mobile d-flex justify-content-between align-items-center py-1">
+                                <!-- <div class="each-transaction-mobile bg-primary d-flex justify-content-between align-items-center py-1">
                                     <div class="descrption">
                                         <p id="transactions_title">Netflix Bill</p>
                                     </div>
                                     <div class="time fs-13px text-center">
                                         <p id="transactions_time">12:56pm<br>18/87/79</p>
                                     </div>
-                                    <div class="amount">
+                                    <div class="amount d-flex justify-content-around gap-2 align-content-center">
+                                        <button class="btn btn-danger" id="transactionDeleteBtn">Delete</button>
+                                        <button class="btn btn-danger">Edit</button>
                                         <p id="transactions_amount" >208544</p>
                                     </div>
                                 </div> -->
+                                <!-- < -->
                                 <div class="text-center fs-1 fw-bold w-100 pt-4 pb-3">
                                     <p >. . . </p>
                                 </div>
                             </div>
-
                         </div>
+                        <button id="downloadBtn" class="btn btn-primary mt-3 ms-3 me-3"> Download Statement (PDF)</button>
+
                     </div>
                     <div class="pie-chart col-12 col-xl-4 ">
                         <h3 class="ms-3 mb-4 Montserrat fw-semibold">Statistical View</h3>
@@ -240,6 +244,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="/Frontend/assets/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script type="module" src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -94,7 +94,8 @@
 }
 #withdrawBtn:hover::after{
     content: "Add Withdrawal";
-    color:#d2d0d0;
+    color:white;
+    font-weight: 600;
     font-size: 1.5rem;
     padding: 60px 0;
     background-color: rgb(58, 18, 18);
@@ -106,7 +107,8 @@
 }
 #depositBtn:hover::after{
     content: "Add Deposits";
-    color:#d2d0d0;
+    color:white;
+    font-weight: 600;
     font-size: 1.5rem;
     padding: 60px 0;
     background-color: rgb(31, 49, 21);
